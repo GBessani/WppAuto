@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "moment-timezone": "^0.5.45",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.12.1",
+    "puppeteer-core": "^24.12.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": ""
+  }
+}
