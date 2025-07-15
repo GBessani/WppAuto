@@ -1,16 +1,23 @@
-#Dependencias
+# Dependências
 node_modules/
 
-#Variaveis de ambiente
+# Git hooks
+.husky/
+
+# Pasta de código (em caso de renomear “SRC” para “src”)
+SRC/
+
+# Dados gerados em runtime
+data/wwebjs_auth/
+data/wwebjs_cache/
+data/pdfs/
+
+# Se ainda existir “PDFs” ou “SRC” fora de “data” ou “src”
+PDFs/
+SRC/
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Outros
+.DS_Store
 .env
-
-#Build/Saida
-dist/
-build/
-
-#logs
-*.log
-
-#IDES
-.vscode/
-.idea/
