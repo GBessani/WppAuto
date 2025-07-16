@@ -4,10 +4,12 @@
   "description": "Bot para automação no WhatsApp usando whatsapp-web.js e Puppeteer",
   "main": "src/index.js",
   "type": "module",
-  "scripts": {
-    "lint": "eslint src --fix",
-    "prepare": "husky install"
-  },
+  "private": true,
+"scripts": {
+  "start": "concurrently \"node src/index.js\" \"node src/server.js\"",
+  "lint": "eslint src --fix",
+  "prepare": "husky install"
+},
   "lint-staged": {
     "src/**/*.{js,ts}": [
       "npm run lint",
@@ -16,19 +18,38 @@
   },
   "dependencies": {
     "dotenv": "^17.2.0",
+    "express": "^5.1.0",
     "moment-timezone": "^0.5.45",
     "node-fetch": "^3.3.2",
     "puppeteer": "^24.12.1",
-    "puppeteer-core": "^24.12.1",
+    "qrcode": "^1.5.4",
     "qrcode-terminal": "^0.12.0",
     "whatsapp-web.js": "1.31.1-alpha.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.31.0",
+    "concurrently": "^9.2.0",
     "eslint": "^8.0.0",
     "eslint-plugin-prettier": "^5.5.1",
     "husky": "^9.0.0",
     "lint-staged": "^14.0.0",
     "prettier": "^3.6.2"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GBessani/WppAuto.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Bessani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GBessani/WppAuto/issues"
+  },
+  "homepage": "https://github.com/GBessani/WppAuto#readme",
+  "engines": {
+    "node": ">=18"
   }
 }
